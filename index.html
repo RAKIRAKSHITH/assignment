@@ -1,0 +1,50 @@
+<html>  
+<head>  
+    <title>PHP login system</title>  
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>Login</h1>  
+        <form name="f1" action = "http://localhost/assignment/authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> usernName: </label>  
+                <input type = "text" id ="username" name  = "username" />  
+            </p>  
+            <p>  
+                <label> password: </label>  
+                <input type = "password" id ="password" name  = "password" />  
+            </p>  
+            <p>     
+                <input type =  "submit" id = "btn"  name="submit" value = "Login" />  
+            </p>  
+        </form>  
+    </div>  
+ 
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.username.value;  
+                var ps=document.f1.password.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("username Name and passwordword fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("username Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("passwordword field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  
+
+
